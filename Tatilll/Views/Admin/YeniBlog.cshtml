@@ -1,0 +1,25 @@
+﻿@model Tatilll.Models.Sinifler.Blog
+@{
+    ViewBag.Title = "YeniBlog";
+    Layout = "~/Views/_AdminLayout.cshtml";
+}
+
+<h2>Yeni Blog Ekle</h2>
+<br />
+<form class="form-group" method="post">
+    @Html.LabelFor(o => o.Baslik)
+    @Html.TextBoxFor(o => o.Baslik, new { @class = "form-control" })
+    <br />
+    @Html.LabelFor(o => o.Tarih)
+    @Html.TextBoxFor(o => o.Tarih, new { @class = "form-control" })
+    <br />
+    @Html.LabelFor(o => o.BlogImage)
+    @Html.TextBoxFor(o => o.BlogImage, new { @class = "form-control" })
+    <br />
+    @Html.LabelFor(o => o.Aciklama)
+    @Html.TextAreaFor(o => o.Aciklama, new { @class = "form-control" })
+    <br />
+
+    <button class="btn btn-danger"> Blog Ekle</button>
+</form>
+

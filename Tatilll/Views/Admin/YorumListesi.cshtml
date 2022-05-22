@@ -1,0 +1,37 @@
+﻿@using Tatilll.Models.Sinifler
+@model List<Yorumlar>
+@{
+    ViewBag.Title = "YorumListesi";
+    Layout = "~/Views/_AdminLayout.cshtml";
+}
+
+<h2>YorumListesi</h2>
+
+
+<table class="table table-bordered">
+    <tr>
+        <th>ID</th>
+        <th>KullaniciAdi</th>
+        <th>Mail</th>
+        <th>Yorum</th>
+        <th>Blog</th>
+        
+    </tr>
+
+    @foreach (var x in Model)
+    {
+<tr>
+    <td>@x.ID</td>
+    <td>@x.KullaniciAdi</td>
+    <td>@x.Mail</td>
+    <td>@x.Yorum</td>
+    <td>@x.blog.Baslik</td>
+    <th><a href="/Admin/YorumSil/@x.ID" class="btn btn-danger">Sil</a></th>
+    <th><a href="/Admin/YorumGetirr/@x.ID" class="btn btn-success">Guncelle</a></th>
+
+</tr>
+    }
+
+
+</table>
+

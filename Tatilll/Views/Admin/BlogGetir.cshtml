@@ -1,0 +1,29 @@
+﻿@model Tatilll.Models.Sinifler.Blog
+@{
+    ViewBag.Title = "BlogGetir";
+    Layout = "~/Views/_AdminLayout.cshtml";
+}
+
+<h2>Blog Guncelleme Sayfasi</h2>
+<br />
+@using (Html.BeginForm("BlogGuncelle", "Admin", FormMethod.Post))
+{
+    @Html.LabelFor(o => o.ID)
+    @Html.TextBoxFor(o => o.ID, new { @class = "form-control", @readonly = "readonly" })
+    <br />
+    @Html.LabelFor(o => o.Baslik)
+    @Html.TextBoxFor(o => o.Baslik, new { @class = "form-control" })
+    <br />
+    @Html.LabelFor(o => o.Tarih)
+    @Html.TextBoxFor(o => o.Tarih, new { @class = "form-control" })
+    <br />
+    @Html.LabelFor(o => o.BlogImage)
+    @Html.TextBoxFor(o => o.BlogImage, new { @class = "form-control" })
+    <br />
+    @Html.LabelFor(o => o.Aciklama)
+    @Html.TextAreaFor(o => o.Aciklama, 15, 1, new { @class = "form-control" })
+    <br />
+    <button class="btn btn-success"> Blog Guncelle</button>
+}
+<
+

@@ -1,0 +1,19 @@
+﻿@using Tatilll.Models.Sinifler
+@model List<Blog>
+<div class="right">
+    @foreach (var t in Model)
+    {
+        <div class="bot-left">
+            <img src="@t.BlogImage" alt="" style="width:380px;height:180px;" />
+        </div>
+        <div class="left-text">
+
+            <h4>@t.Baslik</h4>
+            <span class="doller">@t.Tarih.ToString("dd.MM.yyyy")</span>
+            <p>@t.Aciklama.Substring(0,80)</p>
+            <p><a href="/Blog/BlogDetay/@t.ID"><span class="read">Davamini oxu >></span></a></p>
+        </div>
+
+    }
+
+</div>
